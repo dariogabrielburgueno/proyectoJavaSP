@@ -17,7 +17,7 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter
-    private Long id;
+    private int id;
 
     @Getter
     @Setter

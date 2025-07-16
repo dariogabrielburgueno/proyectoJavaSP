@@ -17,19 +17,19 @@ public class ProductoService {
         return productoRepository.findAll();
     }
 
-    public Producto obtenerProducto(Long id) {
+    public Producto obtenerProducto(int id) {
         return productoRepository.findById(id).orElse(null);
     }
 
     public void agregarProducto(Producto producto) {
         productoRepository.save(producto);
     }
-    public void eliminarProducto(Long id) {
+    public void eliminarProducto(int id) {
         productoRepository.deleteById(id);
     }
 
 
-    public Producto actualizar(Long id, Producto producto) {
+    public Producto actualizar(int id, Producto producto) {
         Producto p=obtenerProducto(id);
         if(p!=null) {
             p.setNombre(producto.getNombre());

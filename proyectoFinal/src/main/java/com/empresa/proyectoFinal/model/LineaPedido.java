@@ -14,7 +14,7 @@ public class LineaPedido {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Getter
-    private Long id;
+    private int id;
 
     @Getter
     @Setter
@@ -24,4 +24,9 @@ public class LineaPedido {
     @Getter
     @Setter
     private Producto producto;
+
+    @ManyToOne
+    @Getter
+    @Setter
+    private Pedido pedido;
 }
